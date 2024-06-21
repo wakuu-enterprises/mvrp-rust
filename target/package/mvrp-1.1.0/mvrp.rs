@@ -1,3 +1,7 @@
+extern crate block_modes;
+extern crate hex_literal;
+extern crate tokio_util;
+
 use aes::Aes256;
 use block_modes::{BlockMode, Cbc};
 use block_modes::block_padding::Pkcs7;

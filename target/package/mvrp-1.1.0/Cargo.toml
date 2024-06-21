@@ -19,29 +19,17 @@ readme = "README.md"
 name = "mvrp"
 path = "main.rs"
 
-[dependencies.aes]
-version = "0.8"
-
-[dependencies.block-modes]
-version = "0.9"
-
 [dependencies.fs_extra]
 version = "1.0"
 
 [dependencies.futures]
 version = "0.3"
 
-[dependencies.hex-literal]
-version = "0.4"
-
 [dependencies.hyper]
 version = "0.14"
 
 [dependencies.hyper-tls]
 version = "0.4"
-
-[dependencies.openssh]
-version = "0.10"
 
 [dependencies.rustls]
 version = "0.20"
@@ -53,15 +41,9 @@ features = ["derive"]
 [dependencies.serde_json]
 version = "1.0"
 
-[dependencies.sha2]
-version = "0.10"
-
 [dependencies.tokio]
 version = "0.2"
 features = ["full"]
 
 [dependencies.tokio-rustls]
 version = "0.22"
-
-[dependencies.tokio-util]
-version = "0.7"

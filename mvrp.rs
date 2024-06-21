@@ -1,4 +1,4 @@
-extern crate block_modes;
+#[macro_use] extern crate block_modes;
 extern crate hex_literal;
 extern crate tokio_util;
 
