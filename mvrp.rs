@@ -21,7 +21,7 @@ impl MVRPServer {
         })
     }
 
-    pub async fn run(&self) -> Result<(), Box<dyn std::error::Error>> {
+    pub async fn run(&mut self) -> Result<(), Box<dyn std::error::Error>> {
         let listener = TcpListener::bind(&self.addr).await?;
         println!("MVRP server listening on {}", self.addr);
 
@@ -84,7 +84,7 @@ async fn handle_request(mut socket: TcpStream, method: &str, _url: &str, _header
     response += &format!("\r\n{}", response_body);
 
     socket.write_all(response.as_bytes()).await?;
-    socket.shutdown().await?;
+    socket.shutdown(socket).await?;
     Ok(())
 }
 

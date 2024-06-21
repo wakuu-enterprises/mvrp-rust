@@ -9,5 +9,5 @@ async fn main() {
     });
 
     // Periodically process video segments
-    mvvp::process_segments("/path/to/uploads", "/path/to/structured").unwrap();
+    mvvp::process_segments("/uploads", "/structured").unwrap();
 }
