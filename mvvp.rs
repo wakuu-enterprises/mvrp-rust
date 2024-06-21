@@ -1,3 +1,5 @@
+extern crate block_modes;
+
 use std::fs::{self, File};
 use std::io::{self, Write};
 use std::path::Path;
