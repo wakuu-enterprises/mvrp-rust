@@ -77,6 +77,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "block-modes"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e2211b0817f061502a8dd9f11a37e879e79763e3c698d2418cf824d8cb2f21e"
+
+[[package]]
 name = "bumpalo"
 version = "3.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -357,7 +363,7 @@ dependencies = [
  "indexmap",
  "slab",
  "tokio 0.2.25",
- "tokio-util",
+ "tokio-util 0.3.1",
  "tracing",
  "tracing-futures",
 ]
@@ -373,6 +379,12 @@ name = "hermit-abi"
 version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024"
+
+[[package]]
+name = "hex-literal"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
 
 [[package]]
 name = "http"
@@ -660,8 +672,10 @@ name = "mvrp"
 version = "1.1.0"
 dependencies = [
  "aes",
+ "block-modes",
  "fs_extra",
  "futures",
+ "hex-literal",
  "hyper 0.14.29",
  "hyper-tls",
  "openssh",
@@ -671,6 +685,7 @@ dependencies = [
  "sha2",
  "tokio 0.2.25",
  "tokio-rustls",
+ "tokio-util 0.7.11",
 ]
 
 [[package]]
@@ -1238,6 +1253,19 @@ dependencies = [
  "log",
  "pin-project-lite 0.1.12",
  "tokio 0.2.25",
+]
+
+[[package]]
+name = "tokio-util"
+version = "0.7.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9cf6b47b3771c49ac75ad09a6162f53ad4b8088b76ac60e8ec1455b31a189fe1"
+dependencies = [
+ "bytes 1.6.0",
+ "futures-core",
+ "futures-sink",
+ "pin-project-lite 0.2.14",
+ "tokio 1.38.0",
 ]
 
 [[package]]
