@@ -5,7 +5,7 @@ mod mvvp;
 async fn main() {
     tokio::spawn(async {
         // Start the server
-        mvrp::MVRPServer::new("127.0.0.1:8443", "path/to/server-key.pem", "path/to/server-cert.pem").await;
+        mvrp::MVRPServer::new("127.0.0.1:8443").await;
     });
 
     // Periodically process video segments
